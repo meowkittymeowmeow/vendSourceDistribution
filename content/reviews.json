@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "stars": 5,
+      "text": "We placed three Qingo smart cooling fridges across our hotel lobby halls. It has completely eliminated standard vending refunds. Guests love how seamless it is—just tap, choose a fresh cold salad, and walk away. Dynamic inventory tracking has cut restock trips in half.",
+      "name": "Marcus V.",
+      "location": "Austin, Texas - Marriott Franchise Owner",
+      "product": "Qingo Smart Cooler"
+    },
+    {
+      "stars": 5,
+      "text": "Absolutely stunning technology. No gears, coils, or plastic spirals to jam, meaning zero dropped carbonated soda cans. Our team easily configured different pricing tags for sandwiches and craft energy beers. Simple to set up in our corporate breakrooms.",
+      "name": "Sarah L.",
+      "location": "Seattle, Washington - Corporate HR Mgr",
+      "product": "Haha Smart Cooler"
+    },
+    {
+      "stars": 5,
+      "text": "As an overland rest facility operator in Utah, we left the Haha Smart Cooler in our 24/7 self-service hub. Customers swipe high frequency credit cards to buy fresh local provisions. The Nayax credit system works flawlessly even with bad satellite delay.",
+      "name": "Brandon K.",
+      "location": "Denver, Colorado - Micro-Market Operator",
+      "product": "Haha Smart Cooler"
+    },
+    {
+      "stars": 5,
+      "text": "The Qingo visual computer vision is brilliant. Hospital staff grab pre-packaged dinners at midnight, and even if they pick an item up, look at the label, and return it to a different shelf, the machine auto-adjusts before billing. Truly premium customer satisfaction experience.",
+      "name": "Cap. Dave H.",
+      "location": "Miami, Florida - Healthcare Operations Director",
+      "product": "Qingo Smart Cooler"
+    }
+  ]
+}

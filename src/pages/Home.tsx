@@ -11,7 +11,8 @@ import {
   ArrowRight,
   Mail,
 } from "lucide-react";
-import { products, steps, reviews, faqItems, CONTACT_EMAIL } from "../data/products";
+import { products, steps, faqItems, CONTACT_EMAIL } from "../data/products";
+import homeContent from "../../content/home.json";
 import { asset } from "../lib/asset";
 import { usePageMeta, SITE_NAME } from "../lib/seo";
 import FinalCta from "../components/FinalCta";
@@ -19,23 +20,15 @@ import MachineViewer from "../components/MachineViewer";
 import ProductCarousel from "../components/ProductCarousel";
 import ReviewSlideshow from "../components/ReviewSlideshow";
 
-const partners = ["Vend Guys", "Nayax Certified", "AI Merchandising", "Micro-Markets"];
+const { hero, partners, capabilities: platformCapabilities } = homeContent;
 
-const platformCapabilities = [
-  "Remote Management",
-  "Inventory Tracking",
-  "Sales Analytics",
-  "Smart Alerts",
-  "Multi-Location Management",
-  "AI Business Insights",
-];
-
-const platformSpecs = [
-  { icon: Scale, title: "Load Cell Shelves", desc: "True sub-2g pressure scales" },
-  { icon: Camera, title: "Dual AI Vision", desc: "Fast visual gesture tracking" },
-  { icon: Wifi, title: "Live Cloud VMS", desc: "Restock push alerts & charts" },
-  { icon: CreditCard, title: "Nayax Payment Link", desc: "Card, NFC & RFID badges" },
-];
+/* The icons stay in code (they're components); the CMS edits the wording.
+   Cards cycle through these if more than four are ever added. */
+const specIcons = [Scale, Camera, Wifi, CreditCard];
+const platformSpecs = homeContent.specCards.map((card, i) => ({
+  icon: specIcons[i % specIcons.length],
+  ...card,
+}));
 
 const HOME_JSONLD = {
   "@context": "https://schema.org",
@@ -100,7 +93,7 @@ export default function Home() {
         <div className="relative overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] min-h-[440px] sm:min-h-[560px] lg:min-h-[82vh] flex flex-col">
           {/* LCP element: never lazy, never deprioritised. */}
           <img
-            src={asset("hero/vending-shelf.jpg")}
+            src={asset(hero.image)}
             alt="Stocked smart vending cooler shelves"
             width={1600}
             height={1000}
@@ -126,16 +119,18 @@ export default function Home() {
               {/* Left: copy + CTAs */}
               <div className="max-w-xl">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white uppercase leading-[1.05] [text-shadow:0_2px_16px_rgb(0_0_0_/_35%)]">
-                  AI-Powered Grab &amp; Go
-                  <br />
-                  Vending Coolers.
+                  {hero.headline.split("\n").map((line, i) => (
+                    <span key={i} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </h1>
                 <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Link
                     to="/shop"
                     className="group inline-flex items-center justify-between gap-3 bg-white text-slate-900 font-semibold text-sm pl-6 pr-2 py-2 rounded-full transition-all shadow-lg shadow-black/20"
                   >
-                    Shop All Machines
+                    {hero.primaryCta}
                     <span className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center transition-transform">
                       <ArrowRight className="w-4 h-4" />
                     </span>
@@ -144,7 +139,7 @@ export default function Home() {
                     to="/contact"
                     className="inline-flex items-center justify-center border border-white/30 bg-white/10 text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors backdrop-blur-xl"
                   >
-                    Talk to Our Team
+                    {hero.secondaryCta}
                   </Link>
                 </div>
               </div>
@@ -152,11 +147,13 @@ export default function Home() {
               {/* Right: floating info cards */}
               <div className="hidden md:flex flex-col gap-3 w-60 shrink-0">
                 <div className="bg-white rounded-2xl p-4 shadow-xl">
-                  <span className="block text-2xl font-bold text-slate-900 tracking-tight">99.9%</span>
-                  <span className="block text-xs font-semibold text-slate-900 mt-0.5">
-                    transaction accuracy
+                  <span className="block text-2xl font-bold text-slate-900 tracking-tight">
+                    {hero.statValue}
                   </span>
-                  <span className="block text-[11px] text-slate-500 mt-1">AI vision + load-cell fusion</span>
+                  <span className="block text-xs font-semibold text-slate-900 mt-0.5">
+                    {hero.statLabel}
+                  </span>
+                  <span className="block text-[11px] text-slate-500 mt-1">{hero.statNote}</span>
                 </div>
                 <div className="bg-white rounded-2xl p-4 shadow-xl">
                   <div className="flex items-center gap-0.5 mb-1.5">
@@ -164,9 +161,7 @@ export default function Home() {
                       <Star key={s} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="block text-xs font-semibold text-slate-900">
-                    500+ office &amp; gym locations
-                  </span>
+                  <span className="block text-xs font-semibold text-slate-900">{hero.ratingLine}</span>
                 </div>
               </div>
             </div>
@@ -262,7 +257,7 @@ export default function Home() {
             </h2>
 
             <img
-              src={asset("hero/platform-dashboard.webp")}
+              src={asset(homeContent.platformImage)}
               alt="Cloud dashboard showing sales totals, order volume and machine status on desktop and mobile"
               width={1574}
               height={1288}
@@ -290,7 +285,7 @@ export default function Home() {
           </ol>
 
           <p className="mt-8 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
-            The preview shown above is of the Qingo vending app.
+            {homeContent.platformNote}
           </p>
         </div>
       </section>
@@ -351,7 +346,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
               <div className="relative rounded-3xl overflow-hidden min-h-[300px] lg:min-h-0">
                 <img
-                  src={asset("hero/tap-to-pay.jpg")}
+                  src={asset(homeContent.howItWorksImage)}
                   alt="Customer paying at a vending machine with a phone tap-to-pay terminal"
                   width={1200}
                   height={800}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "q": "How does the machine accurately detect which item was grabbed?",
+      "a": "Our smart coolers use advanced pressure-sensitive load-cell arrays embedded below each individual SKU slot. Flagship Qingo coolers additionally pair this weight telemetry with multi-angle Computer Vision cameras inside the chassis. The dual sensor fusion accurately identifies purchases up to a 99.9% precision metric."
+    },
+    {
+      "q": "What payment terminals and currencies are supported?",
+      "a": "Every unit comes fully pre-wired with native mounting space for standard Nayax Onyx card readers, supporting magnetic stripes, chip inserting, contactless tap-to-pay credit/debit cards, Apple Pay, Google Pay, and custom RFID employee badges."
+    },
+    {
+      "q": "What happens if a customer returns an item back to a different shelf?",
+      "a": "Our system is designed to handle this effortlessly. If a customer changes their mind, both the load plates and the machine's AI identify the placement. It registers the item as returned, ensuring they are only billed for whatever they successfully walk away with."
+    },
+    {
+      "q": "Do I need a continuous internet connection for these coolers?",
+      "a": "Yes. Both Haha and Qingo utilize real-time authorization to unlock their magnetic locks safely. Our systems come equipped with active Wi-Fi receivers and robust 4G LTE eSIM cellular multi-carrier antennas, ensuring connectivity out-of-the-box."
+    },
+    {
+      "q": "Is specialized staff training required to operate and manage the VMS dashboard?",
+      "a": "Not at all. The VendSource Vending Management System (VMS) cloud dashboard is entirely web-based and highly intuitive. You can configure prices, review sales summaries, and analyze visual stock layout graphs directly from your phone or PC with zero coding."
+    }
+  ]
+}

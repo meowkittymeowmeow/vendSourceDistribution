@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "headline": "AI-Powered Grab & Go\nVending Coolers.",
+    "image": "/hero/vending-shelf.jpg",
+    "primaryCta": "Shop All Machines",
+    "secondaryCta": "Talk to Our Team",
+    "statValue": "99.9%",
+    "statLabel": "transaction accuracy",
+    "statNote": "AI vision + load-cell fusion",
+    "ratingLine": "500+ office & gym locations"
+  },
+  "specCards": [
+    { "title": "Load Cell Shelves", "desc": "True sub-2g pressure scales" },
+    { "title": "Dual AI Vision", "desc": "Fast visual gesture tracking" },
+    { "title": "Live Cloud VMS", "desc": "Restock push alerts & charts" },
+    { "title": "Nayax Payment Link", "desc": "Card, NFC & RFID badges" }
+  ],
+  "partners": ["Vend Guys", "Nayax Certified", "AI Merchandising", "Micro-Markets"],
+  "capabilities": [
+    "Remote Management",
+    "Inventory Tracking",
+    "Sales Analytics",
+    "Smart Alerts",
+    "Multi-Location Management",
+    "AI Business Insights"
+  ],
+  "platformImage": "/hero/platform-dashboard.webp",
+  "platformNote": "The preview shown above is of the Qingo vending app.",
+  "howItWorksImage": "/hero/tap-to-pay.jpg",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Tap Card or Scan QR",
+      "desc": "Customers present their credit/debit card, phone wallet (Apple/Google Pay), or scan the unique QR code on the glass front. The magnetic secure lock releases the door instantly."
+    },
+    {
+      "no": "02",
+      "title": "Grab Desired Items",
+      "desc": "Open the double-tempered anti-fog glass door and take any combination of beverages, fresh foods, snacks, or salads. Customers can inspect labels and return unwanted items freely."
+    },
+    {
+      "no": "03",
+      "title": "Close Door & Go",
+      "desc": "Upon door closure, the door locks, physical load-cell shelves measure the exact items removed, and the cloud computer processes the bill seamlessly in under 3 seconds."
+    }
+  ]
+}

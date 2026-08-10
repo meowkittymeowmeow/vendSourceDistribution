@@ -50,7 +50,7 @@ export function resolveLines(
       description: product.tagline,
       unitAmount: Math.round(product.price * 100),
       quantity,
-      image: `${siteUrl}/${product.imgUrl}`,
+      image: `${siteUrl}/${product.imgUrl.replace(/^\//, "")}`,
     });
   }
 
