@@ -197,13 +197,6 @@ export default function ProductPage() {
             {/* Preview canvas */}
             <div className="order-2 lg:order-none min-w-0 lg:col-start-1 lg:row-start-1">
               <div className="relative rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-sm">
-                <div className="flex items-center justify-between px-5 py-3 border-b border-slate-200/70 bg-white/60 backdrop-blur">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                  </div>
-                </div>
                 <div className="p-6 sm:p-10 lg:p-14 flex items-center justify-center">
                   <img
                     key={activeView.src}
