@@ -1,13 +1,18 @@
-# Preview deploy of the marketing site to GitHub Pages.
+# Staging preview of the marketing site on GitHub Pages.
 #
 # This is a PREVIEW ONLY. Pages serves static files, so nothing under /api works
 # here: the cart can be opened but Stripe checkout, the rep portal and event
-# tracking all need a real backend. The production host is Firebase.
-name: Deploy preview to GitHub Pages
+# tracking all need a real backend. Production runs on Vercel, which is the only
+# place the storefront is actually functional end to end.
+#
+# Requires Settings -> Pages -> Source set to "GitHub Actions". Leaving it on
+# "Deploy from a branch" serves the raw repo instead of this build, which is a
+# blank page — index.html points at /src/main.tsx, an unbuilt TypeScript entry.
+name: Deploy staging to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [staging]
   # So a preview can be re-published without an empty commit.
   workflow_dispatch:
 
