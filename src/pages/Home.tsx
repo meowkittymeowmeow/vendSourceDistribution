@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { products, steps, faqItems, CONTACT_EMAIL } from "../data/products";
 import homeContent from "../../content/home.json";
-import { asset } from "../lib/asset";
+import { asset, assetSrcSet } from "../lib/asset";
 import { usePageMeta, SITE_NAME } from "../lib/seo";
 import FinalCta from "../components/FinalCta";
 import MachineViewer from "../components/MachineViewer";
@@ -94,6 +94,10 @@ export default function Home() {
           {/* LCP element: never lazy, never deprioritised. */}
           <img
             src={asset(hero.image)}
+            /* The hero spans the viewport, so a phone can take the 640w variant
+               instead of the 1800w master — 47KB against 281KB on the LCP. */
+            srcSet={assetSrcSet(hero.image, [640, 960, 1400, 1800])}
+            sizes="100vw"
             alt="Stocked smart vending cooler shelves"
             width={1600}
             height={1000}

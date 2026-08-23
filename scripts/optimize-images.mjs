@@ -17,6 +17,18 @@ const DIRS = ["public/products", "public/hero"];
 const QUALITY = 82;
 const write = process.argv.includes("--write");
 
+/*
+ * Full-bleed images that need responsive variants. A phone rendering the hero
+ * at 390 CSS px has no use for the 1800px master, and it is the LCP element, so
+ * that is the single most expensive byte-for-byte fetch on the page.
+ *
+ * The hero sits under a 35% black scrim plus a gradient, which hides
+ * compression artifacts — hence a lower quality than the default.
+ */
+const RESPONSIVE = {
+  "public/hero/vending-shelf.webp": { widths: [640, 960, 1400, 1800], quality: 68 },
+};
+
 let before = 0;
 let after = 0;
 
@@ -44,6 +56,23 @@ for (const dir of DIRS) {
       fs.writeFileSync(out, buf);
       fs.unlinkSync(src);
     }
+  }
+}
+
+for (const [src, { widths, quality }] of Object.entries(RESPONSIVE)) {
+  if (!fs.existsSync(src)) {
+    console.warn(`\nSkipping responsive pass, missing: ${src}`);
+    continue;
+  }
+  console.log(`\nResponsive variants for ${path.basename(src)}:`);
+  for (const w of widths) {
+    const out = src.replace(/\.webp$/, `-${w}.webp`);
+    const buf = await sharp(src)
+      .resize({ width: w, withoutEnlargement: true })
+      .webp({ quality, effort: 6 })
+      .toBuffer();
+    console.log(`  ${String(w).padStart(4)}w  ${String(Math.round(buf.length / 1024)).padStart(4)} KB`);
+    if (write) fs.writeFileSync(out, buf);
   }
 }
 
