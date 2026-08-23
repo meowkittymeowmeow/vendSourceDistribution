@@ -49,6 +49,14 @@ function StoreFront({ children }: { children: ReactNode }) {
 
   return (
     <div className="isolate bg-white text-slate-900 min-h-screen font-sans relative selection:bg-blue-600 selection:text-white">
+      {isHome && (
+        // Ambient backdrop. Sits behind everything via -z-10 and never intercepts
+        // pointer events, so it can't swallow clicks on content above it.
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+          <div className="bg-grid absolute inset-0 hidden md:block" />
+        </div>
+      )}
+
       <ReferralTracker />
       <Header />
       {children}
