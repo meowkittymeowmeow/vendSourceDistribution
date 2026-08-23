@@ -12,7 +12,8 @@
       "mcp__Claude_in_Chrome__javascript_tool",
       "WebFetch(domain:twelve28vend.com)",
       "Bash(node -e \"const l=require\\('./node_modules/lucide-react'\\); ['Scale','Camera','Wifi','CreditCard','Snowflake'].forEach\\(n=>console.log\\(n, typeof l[n]\\)\\)\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(awk '{printf \"%6.0f KB  %s\\\\n\", $1/1024, $2}')"
     ]
   }
 }

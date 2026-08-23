@@ -15,7 +15,7 @@
       "weight": "115 kg (sturdy secure metal frame)",
       "bestFor": "Office breakrooms, gyms, hotel lobbies, residential apartment hubs.",
       "description": "Smart micro-market vending cooler with physical high-accuracy load-cell shelves. Customers tap to unlock, grab their snacks or beverages, close the door, and get charged automatically. Zero spiral jams, coils, or dropped item damage.",
-      "imgUrl": "/products/haha-1200-ultra.png",
+      "imgUrl": "/products/haha-1200-ultra.webp",
       "imgW": 466,
       "imgH": 667,
       "gallery": [],
@@ -41,7 +41,7 @@
       "weight": "165 kg (extremely robust anti-vandal retail structure)",
       "bestFor": "High-traffic commercial complexes, medical systems, universities, airport lounges.",
       "description": "Dual isolated glass-door smart cooling vending station. Fuses advanced digital weight sensors with internal multi-angle AI computer vision cameras to maintain supreme 99.9% transaction accuracy, perfect even for chaotic grab-and-return behaviors.",
-      "imgUrl": "/products/max-620.png",
+      "imgUrl": "/products/max-620.webp",
       "imgW": 277,
       "imgH": 668,
       "gallery": [],
@@ -67,12 +67,12 @@
       "weight": "194 lbs (W26.38 × D25.39 × H73.62 inch)",
       "bestFor": "Offices, gyms, break rooms, hotel lobbies.",
       "description": "Compact single-door AI smart vending machine with 9 columns × 7 rows × 6 tiers. AI Dynamic Recognition technology delivers 99% transaction accuracy. Standard US outlet (120V/60Hz), Nayax & Pax payment terminals included.",
-      "imgUrl": "/products/qingo-king-509.png",
+      "imgUrl": "/products/qingo-king-509.webp",
       "imgW": 731,
       "imgH": 1024,
       "gallery": [
-        { "src": "/products/qingo-king-509-angle.png", "w": 663, "h": 1024, "label": "Side profile" },
-        { "src": "/products/qingo-king-509-interior.png", "w": 407, "h": 1100, "label": "Empty shelving" }
+        { "src": "/products/qingo-king-509-angle.webp", "w": 663, "h": 1024, "label": "Side profile" },
+        { "src": "/products/qingo-king-509-interior.webp", "w": 407, "h": 1100, "label": "Empty shelving" }
       ],
       "specs": ["AI Dynamic Recognition", "99% accuracy", "Nayax & Pax payments", "Remote temp control"]
     },
@@ -91,12 +91,12 @@
       "weight": "276 lbs (W32.64 × D26.18 × H78.66 inch)",
       "bestFor": "High-traffic offices, universities, medical facilities, hotel lobbies.",
       "description": "Full-featured single-door AI smart vending machine with 11 columns × 7 rows × 6 tiers (plus 11 × 3 × 1 tiers). AI Dynamic Recognition with 99% accuracy. Nayax & Pax terminals, beverage & snack pushers available.",
-      "imgUrl": "/products/qingo-ace-779.png",
+      "imgUrl": "/products/qingo-ace-779.webp",
       "imgW": 587,
       "imgH": 1100,
       "gallery": [
-        { "src": "/products/qingo-ace-779-angle.png", "w": 535, "h": 1100, "label": "Side profile" },
-        { "src": "/products/qingo-ace-779-interior.png", "w": 539, "h": 1100, "label": "Empty shelving" }
+        { "src": "/products/qingo-ace-779-angle.webp", "w": 535, "h": 1100, "label": "Side profile" },
+        { "src": "/products/qingo-ace-779-interior.webp", "w": 539, "h": 1100, "label": "Empty shelving" }
       ],
       "specs": ["AI Dynamic Recognition", "99% accuracy", "Nayax & Pax payments", "Remote temp control"]
     },
@@ -115,12 +115,12 @@
       "weight": "388 lbs (W48.23 × D27.76 × H82.09 inch)",
       "bestFor": "Airports, transit hubs, large event venues, major commercial complexes.",
       "description": "Dual glass-door high-capacity AI smart vending machine with 16 columns × 7 rows × 6 tiers. AI Dynamic Recognition with 99% accuracy. Built for locations that demand maximum throughput with minimal restocking frequency.",
-      "imgUrl": "/products/qingo-pair-1208.png",
+      "imgUrl": "/products/qingo-pair-1208.webp",
       "imgW": 768,
       "imgH": 1019,
       "gallery": [
-        { "src": "/products/qingo-pair-1208-angle.png", "w": 738, "h": 1024, "label": "Side profile" },
-        { "src": "/products/qingo-pair-1208-interior.png", "w": 768, "h": 1019, "label": "Empty shelving" }
+        { "src": "/products/qingo-pair-1208-angle.webp", "w": 738, "h": 1024, "label": "Side profile" },
+        { "src": "/products/qingo-pair-1208-interior.webp", "w": 768, "h": 1019, "label": "Empty shelving" }
       ],
       "specs": ["Dual door high capacity", "99% AI accuracy", "Nayax & Pax payments", "Remote temp control"]
     },
@@ -139,7 +139,7 @@
       "weight": "120 kg (heavy-duty steel frame with anti-vibration mounts)",
       "bestFor": "Break rooms, convenience stores, food courts, hospitality venues.",
       "description": "Purpose-built smart frozen vending unit with load-cell shelving and a deep-freeze glass door cabinet. Handles everything from ice cream and frozen meals to packaged snacks — all contactless, 24/7.",
-      "imgUrl": "/products/freezer.png",
+      "imgUrl": "/products/freezer.webp",
       "imgW": 221,
       "imgH": 622,
       "gallery": [],

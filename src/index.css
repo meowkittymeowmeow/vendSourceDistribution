@@ -11,6 +11,19 @@
      white text and arrow glyphs sit at maximum contrast. */
   --color-robin: #0f172a;
   --color-robin-dark: #020617;
+
+  /*
+   * Panel elevation. Tailwind's shadow-* scale is bottom-weighted (shadow-xl is
+   * offset 20px down), which on a large card reads as a shadow under the bottom
+   * edge only. These keep the offset far smaller than the blur, so the shadow
+   * wraps all four sides evenly while still sitting the panel on the page.
+   */
+  --shadow-panel:
+    0 2px 18px rgb(2 6 23 / 0.08),
+    0 6px 48px rgb(2 6 23 / 0.07);
+  --shadow-panel-sm:
+    0 1px 10px rgb(2 6 23 / 0.06),
+    0 3px 24px rgb(2 6 23 / 0.05);
 }
 
 /*
