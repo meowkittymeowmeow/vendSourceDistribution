@@ -90,7 +90,7 @@ export default function Home() {
         of the shelf. Less height, less crop.
       */}
       <section className="pt-4 px-3 sm:px-4 lg:px-6">
-        <div className="relative overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] min-h-[440px] sm:min-h-[560px] lg:min-h-[82vh] flex flex-col">
+        <div className="relative overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] min-h-[440px] sm:min-h-[560px] lg:min-h-[82vh] flex flex-col shadow-xl shadow-slate-950/5">
           {/* LCP element: never lazy, never deprioritised. */}
           <img
             src={asset(hero.image)}
@@ -173,7 +173,7 @@ export default function Home() {
       <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {platformSpecs.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-slate-100 rounded-3xl p-5 lg:p-6 flex flex-col gap-6 lg:gap-10">
+            <div key={title} className="bg-slate-100 rounded-3xl p-5 lg:p-6 flex flex-col gap-6 lg:gap-10 shadow-md shadow-slate-950/5">
               <div className="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center">
                 <Icon className="w-4.5 h-4.5" />
               </div>
@@ -227,7 +227,7 @@ export default function Home() {
             off the right of the page, which is what leaves the next card cut in
             half. The right border and radius come off for the same reason. */}
         <div className="grid grid-cols-[1fr_minmax(0,80rem)_1fr]">
-          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8 bg-white border border-r-0 border-slate-200 rounded-l-[2rem] py-6 sm:py-10 lg:py-12">
+          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8 bg-white border border-r-0 border-slate-200 rounded-l-[2rem] py-6 sm:py-10 lg:py-12 shadow-xl shadow-slate-950/5">
             <div className="px-6 sm:px-10 lg:px-12 flex flex-wrap items-center justify-between gap-x-8 gap-y-5">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Our Products</h2>
               <Link
@@ -250,7 +250,7 @@ export default function Home() {
 
       {/* PLATFORM CAPABILITIES — numbered index of what the software covers */}
       <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12">
+        <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-950/5">
           <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr] gap-10 lg:gap-14 items-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-[1.1]">
               One intelligent platform for every vending operation.
@@ -293,7 +293,7 @@ export default function Home() {
       {/* 3D SHOWCASE — the flagship, rotating, with its headline specs */}
       {showcase && (
         <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-10 lg:gap-14 items-center">
+          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-950/5 grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-10 lg:gap-14 items-center">
             {/* On mobile the render leads and the copy follows; on desktop the
                 two-column order is reversed back to copy-then-render. */}
             <div className="order-2 lg:order-1">
@@ -336,7 +336,7 @@ export default function Home() {
       {/* HOW IT WORKS — photo + numbered list rows */}
       <section className="py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12">
+          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-950/5">
             <div className="max-w-xl mb-10 lg:mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 How It Works in 3 Steps
@@ -377,7 +377,7 @@ export default function Home() {
       {/* REVIEWS — side-column + staggered grey cards */}
       <section id="reviews" className="py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-[0.32fr_0.68fr] gap-10 lg:gap-14">
+          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-950/5 grid grid-cols-1 lg:grid-cols-[0.32fr_0.68fr] gap-10 lg:gap-14">
             <div className="lg:self-start">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 What Vending Operators Say
@@ -427,7 +427,7 @@ export default function Home() {
       {/* FAQ — split editorial layout */}
       <section id="faq" className="py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-[0.38fr_0.62fr] gap-10 lg:gap-16">
+          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-950/5 grid grid-cols-1 lg:grid-cols-[0.38fr_0.62fr] gap-10 lg:gap-16">
             <div className="lg:self-start">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 Frequently Asked Questions
