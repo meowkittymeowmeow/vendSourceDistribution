@@ -397,23 +397,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LINEUP CTA — deliberately unpanelled. Every other section on the page
-          is a card, so leaving this one on the bare background is what makes it
-          read as a break in the rhythm rather than one more block. */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.05]">
-            Browse the full lineup
-          </h2>
-          <Link
-            to="/shop"
-            className="mt-8 inline-flex items-center justify-between gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
-          >
-            Shop all machines
-            <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
-              <ArrowRight className="animate-nudge-x w-4 h-4" />
-            </span>
-          </Link>
+      {/* LINEUP CTA — takes the standard section card. It needs an opaque fill
+          rather than just breathing room: the ambient grid runs behind this part
+          of the page, and gridlines through the headline made it unreadable. */}
+      <section className="py-10 lg:py-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="bg-white border border-slate-200 rounded-[2rem] px-6 py-12 sm:px-10 sm:py-16 shadow-panel text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.05]">
+              Browse the full lineup
+            </h2>
+            <Link
+              to="/shop"
+              className="mt-8 inline-flex items-center justify-between gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
+            >
+              Shop all machines
+              <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
+                <ArrowRight className="animate-nudge-x w-4 h-4" />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
