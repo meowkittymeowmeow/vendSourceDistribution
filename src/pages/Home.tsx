@@ -95,7 +95,7 @@ export default function Home() {
           <img
             src={asset(hero.image)}
             /* The hero spans the viewport, so a phone can take the 640w variant
-               instead of the 1800w master — 47KB against 281KB on the LCP. */
+               instead of the 1800w master — 64KB against 281KB on the LCP. */
             srcSet={assetSrcSet(hero.image, [640, 960, 1400, 1800])}
             sizes="100vw"
             alt="Stocked smart vending cooler shelves"

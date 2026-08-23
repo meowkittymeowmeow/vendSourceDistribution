@@ -22,11 +22,11 @@ const write = process.argv.includes("--write");
  * at 390 CSS px has no use for the 1800px master, and it is the LCP element, so
  * that is the single most expensive byte-for-byte fetch on the page.
  *
- * The hero sits under a 35% black scrim plus a gradient, which hides
- * compression artifacts — hence a lower quality than the default.
+ * Kept at the default quality: the scrim over the hero does not hide artifacts
+ * as well as it looks like it should, and a soft hero is worth the extra bytes.
  */
 const RESPONSIVE = {
-  "public/hero/vending-shelf.webp": { widths: [640, 960, 1400, 1800], quality: 68 },
+  "public/hero/vending-shelf.webp": { widths: [640, 960, 1400, 1800], quality: QUALITY },
 };
 
 let before = 0;
