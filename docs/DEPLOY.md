@@ -45,17 +45,24 @@ ones reach the browser bundle; the rest stay server-side.
 
 Add the domain under Settings → Domains, then at the registrar:
 
-| Record  | Name  | Value                  |
-| ------- | ----- | ---------------------- |
-| `A`     | `@`   | `76.76.21.21`          |
-| `CNAME` | `www` | `cname.vercel-dns.com` |
+| Record  | Name  | Value                                  |
+| ------- | ----- | -------------------------------------- |
+| `A`     | `@`   | `216.198.79.1`                         |
+| `CNAME` | `www` | `111c8c4776cff5cd.vercel-dns-017.com.` |
 
-Vercel shows the values it expects on the domain screen; prefer those over this
-table if they differ. Delegating nameservers to Vercel instead also works.
+Vercel shows the exact values it expects on the domain screen — the CNAME target
+is project-specific, and the apex IP has changed before. Prefer what the
+dashboard shows over this table if they differ.
 
-**Pick one canonical host.** Vercel redirects the other automatically, but
-`SITE_URL` must match the canonical one exactly, or Stripe returns the customer
-to a host that immediately redirects mid-checkout.
+Do **not** add a registrar-level URL redirect record on `@`. Vercel already
+redirects the apex to `www` over HTTPS; a registrar redirect conflicts with the
+`A` record, can only offer a plaintext `http://` hop, and can break Vercel's
+certificate renewal by intercepting its HTTP validation requests.
+
+**`www` is the canonical host.** Vercel serves the site there and 308s the apex
+to it, so `SITE_URL` must be `https://www.vendsourcedistribution.com` with no
+trailing slash. Pointing it at the apex adds a redirect hop in the middle of
+Stripe's checkout return.
 
 ## 4. Stripe webhook
 
@@ -64,7 +71,7 @@ recorded until this is live.
 
 Create an endpoint in the Stripe dashboard (test mode first):
 
-- URL: `https://<canonical-domain>/api/webhooks/stripe`
+- URL: `https://www.vendsourcedistribution.com/api/webhooks/stripe`
 - Events — exactly these three, which are what `api/webhooks/stripe.ts` handles:
   - `checkout.session.completed` — creates the order and accrues commission
   - `charge.refunded` — reverses unpaid commission
