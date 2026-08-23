@@ -397,34 +397,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LINEUP CTA — borrows the product page's window-chrome treatment so the
-          block reads as an app window rather than another flat panel. */}
-      <section className="py-10 lg:py-14">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="relative rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white overflow-hidden shadow-panel">
-            <div className="flex items-center justify-between px-5 py-3 border-b border-slate-200/70 bg-white/60 backdrop-blur">
-              <div className="flex items-center gap-1.5" aria-hidden="true">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-              </div>
-            </div>
-
-            <div className="px-6 py-12 sm:px-10 sm:py-16 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.05]">
-                Browse the full lineup
-              </h2>
-              <Link
-                to="/shop"
-                className="mt-8 inline-flex items-center justify-between gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
-              >
-                Shop all machines
-                <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
-                  <ArrowRight className="animate-nudge-x w-4 h-4" />
-                </span>
-              </Link>
-            </div>
-          </div>
+      {/* LINEUP CTA — deliberately unpanelled. Every other section on the page
+          is a card, so leaving this one on the bare background is what makes it
+          read as a break in the rhythm rather than one more block. */}
+      <section className="py-16 lg:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.05]">
+            Browse the full lineup
+          </h2>
+          <Link
+            to="/shop"
+            className="mt-8 inline-flex items-center justify-between gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
+          >
+            Shop all machines
+            <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
+              <ArrowRight className="animate-nudge-x w-4 h-4" />
+            </span>
+          </Link>
         </div>
       </section>
 
