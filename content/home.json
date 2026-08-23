@@ -1,7 +1,7 @@
 {
   "hero": {
     "headline": "AI-Powered Grab & Go\nVending Coolers.",
-    "image": "/hero/vending-shelf.jpg",
+    "image": "/hero/vending-shelf.webp",
     "primaryCta": "Shop All Machines",
     "secondaryCta": "Talk to Our Team",
     "statValue": "99.9%",
@@ -26,7 +26,7 @@
   ],
   "platformImage": "/hero/platform-dashboard.webp",
   "platformNote": "The preview shown above is of the Qingo vending app.",
-  "howItWorksImage": "/hero/tap-to-pay.jpg",
+  "howItWorksImage": "/hero/tap-to-pay.webp",
   "steps": [
     {
       "no": "01",
