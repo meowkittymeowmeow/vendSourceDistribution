@@ -55,10 +55,6 @@ content:
           - name: desc
             label: Description
             type: string
-      - name: partners
-        label: Scrolling partner names
-        type: string
-        list: true
       - name: capabilities
         label: Platform capabilities (numbered list)
         type: string
