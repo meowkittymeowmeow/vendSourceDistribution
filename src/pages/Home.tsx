@@ -8,6 +8,7 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
+  ArrowRight,
   Mail,
 } from "lucide-react";
 import { products, steps, faqItems, CONTACT_EMAIL } from "../data/products";
@@ -130,9 +131,10 @@ export default function Home() {
                 <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Link
                     to="/shop"
-                    className="inline-flex items-center justify-center bg-white text-slate-900 font-semibold text-sm px-5 py-3 rounded-md"
+                    className="inline-flex items-center justify-center bg-white text-slate-900 font-semibold text-sm px-5 py-3 rounded-md btn-reveal"
                   >
                     {hero.primaryCta}
+                    <ArrowRight className="btn-arrow w-4 h-4" aria-hidden="true" />
                   </Link>
                   <Link
                     to="/contact"
@@ -192,20 +194,23 @@ export default function Home() {
             column runs the rail off the right of the page, which is what leaves
             the next product cut in half. */}
         <div className="grid grid-cols-[1fr_minmax(0,80rem)_1fr]">
-          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8">
+          {/* The heading row stays inside the page container so its button
+              keeps the usual right gutter; only the rail runs off the edge. */}
+          <div className="col-start-2 col-end-3 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-5">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Our Products</h2>
               <Link
                 to="/shop"
-                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
+                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md btn-reveal"
               >
                 Shop All Machines
+                <ArrowRight className="btn-arrow w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
+          </div>
 
-            <div className="mt-8 lg:mt-10">
-              <ProductCarousel products={products} />
-            </div>
+          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8 mt-8 lg:mt-10">
+            <ProductCarousel products={products} />
           </div>
         </div>
       </section>
@@ -275,9 +280,10 @@ export default function Home() {
 
               <Link
                 to={`/shop/${showcase.id}`}
-                className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
+                className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md btn-reveal"
               >
                 View the {showcase.name}
+                <ArrowRight className="btn-arrow w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
 
@@ -361,9 +367,10 @@ export default function Home() {
             </h2>
             <Link
               to="/shop"
-              className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
+              className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md btn-reveal"
             >
               Shop all machines
+              <ArrowRight className="btn-arrow w-4 h-4" aria-hidden="true" />
             </Link>
           </div>
         </div>

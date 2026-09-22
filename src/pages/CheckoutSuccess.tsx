@@ -51,13 +51,13 @@ export default function CheckoutSuccess() {
       <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
         <Link
           to="/shop"
-          className="bg-robin text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+          className="bg-robin text-white font-semibold text-sm px-6 py-3 rounded-md transition-colors"
         >
           Continue browsing
         </Link>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="inline-flex items-center justify-center gap-2 border border-slate-300 text-slate-700 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center gap-2 border border-slate-300 text-slate-700 font-semibold text-sm px-6 py-3 rounded-md transition-colors"
         >
           <Mail className="w-4 h-4" />
           <span>Questions about your order</span>

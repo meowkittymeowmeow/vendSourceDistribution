@@ -70,7 +70,7 @@ export default function CartDrawer() {
                   <Link
                     to="/shop"
                     onClick={() => setCartOpen(false)}
-                    className="bg-robin text-white font-semibold text-xs px-6 py-3 rounded-lg transition-colors"
+                    className="bg-robin text-white font-semibold text-xs px-6 py-3 rounded-md transition-colors"
                   >
                     Browse Coolers
                   </Link>

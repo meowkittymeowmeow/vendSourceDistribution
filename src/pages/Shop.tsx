@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { products } from "../data/products";
 import { asset } from "../lib/asset";
 import { usePageMeta } from "../lib/seo";
@@ -96,9 +97,10 @@ export default function Shop() {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-lg shrink-0 justify-self-start"
+                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md btn-reveal shrink-0 justify-self-start"
               >
                 Get bulk pricing
+                <ArrowRight className="btn-arrow w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
