@@ -104,7 +104,7 @@ export default function PortalMyLink() {
               <a
                 href={qr}
                 download={`vendsource-${code}.png`}
-                className="inline-flex items-center gap-2 bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-4 py-2.5 rounded-lg"
+                className="inline-flex items-center gap-2 bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-4 py-2.5 rounded-md"
               >
                 <Download className="w-4 h-4" />
                 <span>Download PNG</span>

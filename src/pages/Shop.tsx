@@ -96,7 +96,7 @@ export default function Shop() {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-900 font-semibold text-sm px-6 py-3 rounded-full shrink-0 justify-self-start"
+                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-lg shrink-0 justify-self-start"
               >
                 Get bulk pricing
               </Link>

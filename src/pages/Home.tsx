@@ -8,7 +8,6 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
-  ArrowRight,
   Mail,
 } from "lucide-react";
 import { products, steps, faqItems, CONTACT_EMAIL } from "../data/products";
@@ -131,16 +130,13 @@ export default function Home() {
                 <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Link
                     to="/shop"
-                    className="group inline-flex items-center justify-between gap-3 bg-white text-slate-900 font-semibold text-sm pl-6 pr-2 py-2 rounded-full transition-all shadow-lg shadow-black/20"
+                    className="inline-flex items-center justify-center bg-white text-slate-900 font-semibold text-sm px-5 py-3 rounded-md"
                   >
                     {hero.primaryCta}
-                    <span className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center transition-transform">
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
                   </Link>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center border border-white/30 bg-white/10 text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors backdrop-blur-xl"
+                    className="inline-flex items-center justify-center border border-white/60 text-white font-semibold text-sm px-5 py-3 rounded-md"
                   >
                     {hero.secondaryCta}
                   </Link>
@@ -201,12 +197,9 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Our Products</h2>
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
+                className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
               >
                 Shop All Machines
-                <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center transition-transform">
-                  <ArrowRight className="w-4 h-4" />
-                </span>
               </Link>
             </div>
 
@@ -282,12 +275,9 @@ export default function Home() {
 
               <Link
                 to={`/shop/${showcase.id}`}
-                className="mt-8 inline-flex items-center gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
+                className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
               >
                 View the {showcase.name}
-                <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4" />
-                </span>
               </Link>
             </div>
 
@@ -371,12 +361,9 @@ export default function Home() {
             </h2>
             <Link
               to="/shop"
-              className="mt-8 inline-flex items-center justify-between gap-3 bg-robin text-white font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-lg shadow-slate-950/20"
+              className="mt-8 inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-md"
             >
               Shop all machines
-              <span className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center">
-                <ArrowRight className="animate-nudge-x w-4 h-4" />
-              </span>
             </Link>
           </div>
         </div>

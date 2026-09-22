@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { CONTACT_EMAIL } from "../data/products";
 
 /**
@@ -25,15 +25,11 @@ export default function FinalCta() {
               </p>
             </div>
 
-            {/* Same shape as the contact submit: white pill, periwinkle action. */}
             <Link
               to="/contact"
-              className="inline-flex items-center justify-between gap-3 bg-white border border-slate-200 text-slate-900 font-semibold text-sm pl-6 pr-2 py-2 rounded-full shadow-sm shrink-0 justify-self-start"
+              className="inline-flex items-center justify-center bg-robin text-white font-semibold text-sm px-5 py-3 rounded-lg shrink-0 justify-self-start"
             >
               Get bulk pricing
-              <span className="bg-robin w-9 h-9 rounded-full text-white flex items-center justify-center">
-                <ArrowRight className="animate-nudge-x w-4 h-4" />
-              </span>
             </Link>
           </div>
         </div>
@@ -50,7 +46,7 @@ export default function FinalCta() {
 
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-900 font-semibold text-sm px-6 py-3 rounded-full shrink-0 justify-self-start"
+              className="inline-flex items-center justify-center bg-white border border-slate-300 text-slate-900 font-semibold text-sm px-5 py-3 rounded-lg gap-2 shrink-0 justify-self-start"
             >
               <Mail className="w-4 h-4" />
               Email us

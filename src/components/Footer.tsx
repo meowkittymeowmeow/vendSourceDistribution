@@ -43,7 +43,7 @@ export default function Footer() {
                 e.preventDefault();
                 alert("Successfully joined!");
               }}
-              className="flex bg-white border border-slate-300 p-1 rounded-full mt-4"
+              className="flex bg-white border border-slate-300 p-1 rounded-lg mt-4"
             >
               <label htmlFor="footer-email" className="sr-only">
                 Your business email
@@ -57,7 +57,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="shrink-0 bg-robin text-white px-4 py-1.5 rounded-full font-semibold text-xs"
+                className="shrink-0 bg-robin text-white px-4 py-1.5 rounded font-semibold text-xs"
               >
                 Join
               </button>

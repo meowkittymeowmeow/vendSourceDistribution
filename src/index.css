@@ -248,16 +248,3 @@ textarea:focus-visible,
   display: none;
 }
 
-/* Ambient motion, since hover feedback is switched off site-wide. */
-@keyframes nudge-x {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(4px);
-  }
-}
-.animate-nudge-x {
-  animation: nudge-x 2.4s ease-in-out infinite;
-}
