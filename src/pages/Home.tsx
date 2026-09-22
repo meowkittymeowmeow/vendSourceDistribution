@@ -8,6 +8,7 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
+  Check,
   ArrowRight,
   Mail,
 } from "lucide-react";
@@ -215,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PLATFORM CAPABILITIES — numbered index of what the software covers */}
+      {/* PLATFORM CAPABILITIES — checklist of what the software covers */}
       <section className="py-14 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr] gap-10 lg:gap-14 items-center">
@@ -237,19 +238,17 @@ export default function Home() {
           {/* The index runs the full width under both columns. Rules sit on each
               row rather than on a divide-y so the columns stay aligned when a
               title wraps to two lines. */}
-          <ol className="mt-10 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
-            {platformCapabilities.map((label, idx) => (
+          <ul className="mt-10 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
+            {platformCapabilities.map(label => (
               <li
                 key={label}
-                className="flex items-baseline gap-4 py-5 border-t border-slate-200 first:border-t-0 sm:[&:nth-child(2)]:border-t-0 lg:[&:nth-child(3)]:border-t-0"
+                className="flex items-start gap-3 py-5 border-t border-slate-200 first:border-t-0 sm:[&:nth-child(2)]:border-t-0 lg:[&:nth-child(3)]:border-t-0"
               >
-                <span className="text-xs font-bold tabular-nums text-robin shrink-0">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
+                <Check className="w-4 h-4 text-robin shrink-0 translate-y-0.5" aria-hidden="true" />
                 <span className="text-base font-semibold text-slate-900 leading-snug">{label}</span>
               </li>
             ))}
-          </ol>
+          </ul>
 
           <p className="mt-8 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
             {homeContent.platformNote}
