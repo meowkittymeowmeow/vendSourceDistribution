@@ -6,7 +6,6 @@ import { CONTACT_EMAIL } from "../data/products";
  * Closing blocks, in the shape of Meta's support page: a soft gradient panel
  * for the primary action and a plain grey one beneath it.
  *
- * Transparent section background so both cards sit on the page grid.
  * Keeps the `contact` anchor id so existing /#contact links still land here.
  */
 export default function FinalCta() {

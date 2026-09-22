@@ -46,12 +46,12 @@ export default function ReviewSlideshow() {
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-4 rounded-3xl"
+      className="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-4 rounded-lg"
     >
       {/* Fixed min-height stops the section from jolting as reviews of different
  lengths cycle through. */}
       <div
-        className="bg-white rounded-3xl border border-slate-200 shadow-[0_4px_20px_rgba(2,6,23,0.04)] p-7 lg:p-10 flex flex-col justify-between min-h-[19rem] sm:min-h-[17rem]"
+        className="flex flex-col justify-between min-h-[15rem] sm:min-h-[13rem]"
         aria-live="polite"
       >
         <div>

@@ -15,7 +15,6 @@
     { "title": "Live Cloud VMS", "desc": "Restock push alerts & charts" },
     { "title": "Nayax Payment Link", "desc": "Card, NFC & RFID badges" }
   ],
-  "partners": ["Vend Guys", "Nayax Certified", "AI Merchandising", "Micro-Markets"],
   "capabilities": [
     "Remote Management",
     "Inventory Tracking",

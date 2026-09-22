@@ -20,10 +20,10 @@ import MachineViewer from "../components/MachineViewer";
 import ProductCarousel from "../components/ProductCarousel";
 import ReviewSlideshow from "../components/ReviewSlideshow";
 
-const { hero, partners, capabilities: platformCapabilities } = homeContent;
+const { hero, capabilities: platformCapabilities } = homeContent;
 
 /* The icons stay in code (they're components); the CMS edits the wording.
-   Cards cycle through these if more than four are ever added. */
+   Items cycle through these if more than four are ever added. */
 const specIcons = [Scale, Camera, Wifi, CreditCard];
 const platformSpecs = homeContent.specCards.map((card, i) => ({
   icon: specIcons[i % specIcons.length],
@@ -80,7 +80,6 @@ export default function Home() {
   }, [location]);
 
   return (
-    // Transparent, not white: the ambient grid in StoreFront sits behind this.
     <div className="relative overflow-x-clip">
       {/*
         HERO — inset photo panel, giant display type over full-bleed photography.
@@ -173,12 +172,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PLATFORM SPEC CARDS */}
+      {/* PLATFORM SPECS */}
       <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 lg:gap-8">
           {platformSpecs.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-slate-100 rounded-3xl p-5 lg:p-6 flex flex-col gap-6 lg:gap-10 shadow-panel-sm">
-              <div className="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center">
+            <div key={title} className="flex flex-col gap-4 lg:gap-5">
+              <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-900 flex items-center justify-center">
                 <Icon className="w-4.5 h-4.5" />
               </div>
               <div>
@@ -190,49 +189,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARTNER MARQUEE */}
-      <section className="py-6 border-y border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-6">
-          <span className="hidden md:block shrink-0 text-slate-500 text-[11px] font-semibold uppercase tracking-[0.2em]">
-            Official Distributor &amp; Payment Partners
-          </span>
-          <div
-            className="flex-1 overflow-hidden"
-            style={{
-              maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-              WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-            }}
-          >
-            <div className="animate-marquee flex w-max items-center">
-              {[0, 1].map(copy => (
-                <div key={copy} className="flex items-center shrink-0">
-                  {[...partners, ...partners].map((name, i) => (
-                    <span
-                      key={`${copy}-${i}`}
-                      className="mx-8 text-slate-500 text-sm font-semibold tracking-wide whitespace-nowrap"
-                    >
-                      {name}
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURED MACHINES — heading over a rail that runs off the right edge.
-          Deliberately not wrapped in the usual bordered card: the whole point of
-          the treatment is that the row escapes the page gutter. */}
+      {/* FEATURED MACHINES — heading over a rail that runs off the right edge. */}
       <section id="machines" className="py-10 lg:py-12">
-        {/* The middle column reproduces the page container, so the panel's left
-            edge sits exactly where every other section's card starts. Spanning
-            it into the third column runs the panel — and the rail inside it —
-            off the right of the page, which is what leaves the next card cut in
-            half. The right border and radius come off for the same reason. */}
+        {/* The middle column reproduces the page container, so this block's left
+            edge lines up with every other section. Spanning it into the third
+            column runs the rail off the right of the page, which is what leaves
+            the next product cut in half. */}
         <div className="grid grid-cols-[1fr_minmax(0,80rem)_1fr]">
-          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8 bg-white border border-r-0 border-slate-200 rounded-l-[2rem] py-6 sm:py-10 lg:py-12 shadow-panel">
-            <div className="px-6 sm:px-10 lg:px-12 flex flex-wrap items-center justify-between gap-x-8 gap-y-5">
+          <div className="col-start-2 col-end-4 ml-4 sm:ml-6 lg:ml-8">
+            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-5">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Our Products</h2>
               <Link
                 to="/shop"
@@ -253,8 +218,8 @@ export default function Home() {
       </section>
 
       {/* PLATFORM CAPABILITIES — numbered index of what the software covers */}
-      <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-panel">
+      <section className="py-14 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr] gap-10 lg:gap-14 items-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-[1.1]">
               One intelligent platform for every vending operation.
@@ -296,8 +261,8 @@ export default function Home() {
 
       {/* 3D SHOWCASE — the flagship, rotating, with its headline specs */}
       {showcase && (
-        <section className="py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-panel grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-10 lg:gap-14 items-center">
+        <section className="py-14 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-10 lg:gap-14 items-center">
             {/* On mobile the render leads and the copy follows; on desktop the
                 two-column order is reversed back to copy-then-render. */}
             <div className="order-2 lg:order-1">
@@ -338,9 +303,9 @@ export default function Home() {
       )}
 
       {/* HOW IT WORKS — photo + numbered list rows */}
-      <section className="py-10 lg:py-12">
+      <section className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-panel">
+          <div>
             <div className="max-w-xl mb-10 lg:mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 How It Works in 3 Steps
@@ -378,10 +343,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REVIEWS — side-column + staggered grey cards */}
-      <section id="reviews" className="py-10 lg:py-12">
+      {/* REVIEWS — side column + rotating quote */}
+      <section id="reviews" className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-panel grid grid-cols-1 lg:grid-cols-[0.32fr_0.68fr] gap-10 lg:gap-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.32fr_0.68fr] gap-10 lg:gap-14">
             <div className="lg:self-start">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 What Vending Operators Say
@@ -397,12 +362,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LINEUP CTA — takes the standard section card. It needs an opaque fill
-          rather than just breathing room: the ambient grid runs behind this part
-          of the page, and gridlines through the headline made it unreadable. */}
-      <section className="py-10 lg:py-12">
+      {/* LINEUP CTA */}
+      <section className="py-14 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-slate-200 rounded-[2rem] px-6 py-12 sm:px-10 sm:py-16 shadow-panel text-center">
+          <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.05]">
               Browse the full lineup
             </h2>
@@ -420,9 +383,9 @@ export default function Home() {
       </section>
 
       {/* FAQ — split editorial layout */}
-      <section id="faq" className="py-10 lg:py-12">
+      <section id="faq" className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-panel grid grid-cols-1 lg:grid-cols-[0.38fr_0.62fr] gap-10 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.38fr_0.62fr] gap-10 lg:gap-16">
             <div className="lg:self-start">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 Frequently Asked Questions
